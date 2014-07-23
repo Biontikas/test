@@ -1,40 +1,27 @@
-#general:
-#  build_dir: app
-#  artifacts:
-#    - "test/results"
-#
-#machine:
-#  node:
-#    version: 0.10.26
-#
-#dependencies:
-#  pre:
-#    - npm install -g gulp
-##    karma start doesnt work even with this global. works only with node node_modules/karma...
-##    - npm install -g karma
-#    - npm install
-#    - bower update && bower install
-#    - gulp
-#
-#test:
-#  override:
-#    - node node_modules/karma/bin/karma start test/config/unit.js --single-run
+general:
+  build_dir: app
+  artifacts:
+    - "test/results"
 
-#deployment:
-#  demo:
-#    branch: master
-#    commands:
-#      - echo $CIRCLE_ARTIFACTS
+machine:
+  node:
+    version: 0.10.26
+
+dependencies:
+  pre:
+    - npm install -g gulp
+#    karma start doesnt work even with this global. works only with node node_modules/karma...
+#    - npm install -g karma
+    - npm install
+    - bower update && bower install
+    - gulp
+
+test:
+  override:
+    - node node_modules/karma/bin/karma start test/config/unit.js --single-run
 
 deployment:
   demo:
     branch: master
     commands:
       - rsync -avz -e "ssh 92.61.34.46 -l dev" . :glgpartners.net
-      - echo $CIRCLE_ARTIFACTS
-      - ls
-      - cd ..
-      - ls
-      - cd ..
-      - ls
-#      - rsync -avz -e "ssh 92.61.34.46 -l dev" . :deploy
