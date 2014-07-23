@@ -31,7 +31,6 @@ deployment:
     branch: master
     commands:
       - rsync -avz -e "ssh 92.61.34.46 -l dev" . :glgpartners.net
-      - ssh 92.61.34.46 -l dev
       - echo $CIRCLE_ARTIFACTS
       - ls
       - cd ..
