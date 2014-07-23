@@ -1,0 +1,21 @@
+{
+    "d": {
+        "__type": "GLGPartners.TradeIdeas.Theoretical.Entities.SecurityInfo",
+        "ResponseCode": 1,
+        "SecurityID": 278,
+        "Ticker": "BATS LN Equity",
+        "Description": "BRITISH AMERICAN TOBACCO PLC (",
+        "PrevClose": 3600.5,
+        "Ccy": "GBP",
+        "PrimaryExchange": "LN",
+        "ExchCode": "LN",
+        "Isin": "GB000287580",
+        "AvgVol": 2504615,
+        "LastFXRate": 1.230163611760364,
+        "PriceDivisor": 100,
+        "VwapMultiplier": 0,
+        "Industry": "Consumer Staples",
+        "MaxExposure": 0,
+        "MaxQty": 0
+    }
+}

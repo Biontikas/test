@@ -1,0 +1,36 @@
+)]}',
+{
+    "langs": {
+        "available": ["en"],
+        "defaultLang": "en"
+    },
+    "url": {
+        "login": "/login",
+        "authRedirect": "/portfolio"
+    },
+    "navigation": [{
+        "title" : "portfolio",
+        "href" : "portfolio",
+        "role": ["analyst", "originator"]
+    }, {
+        "title" : "portfolioByAnalyst",
+        "href" : "portfolio/analyst",
+        "role": ["analyst", "originator"]
+    }, {
+        "title" : "activityHistory",
+        "href" : "activity-history",
+        "role": ["analyst", "originator"]
+    }, {
+        "title" : "analystAdmin",
+        "href" : "analyst-admin",
+        "role": ["originator"]
+    }, {
+        "title" : "summary",
+        "href" : "summary",
+        "role": ["analyst", "originator"]
+    }, {
+        "title" : "help",
+        "href" : "help",
+        "role": ["analyst", "originator"]
+    }]
+}

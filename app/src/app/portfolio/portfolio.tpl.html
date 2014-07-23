@@ -1,0 +1,19 @@
+<div id="subnav">
+    <ul>
+        <li><a ng-click="portfolio.createIdea()"><i class="ico ico-add"></i>Create New Idea</a></li>
+        <li><a ng-click="portfolio.summaryReport()"><i class="ico ico-pdf"></i>Summary Report</a></li>
+        <li><a ng-click="portfolio.downloadView()"><i class="ico ico-xls"></i>Download View as Excel</a></li>
+        <li><a ng-click="portfolio.downloadAll()"><i class="ico ico-xls"></i>Download All as Excel</a></li>
+        <li><a ng-click="portfolio.downloadGroup()"><i class="ico ico-xls"></i>Download Group as Excel</a></li>
+        <li><a ng-click="portfolioGrid.collapseAll(false)"><i class="ico ico-expand"></i>Expand All</a></li>
+        <li><a ng-click="portfolioGrid.collapseAll(true)"><i class="ico ico-collapse"></i>Collapse All</a></li>
+        <li><a ng-click="portfolio.refresh()"><i class="ico ico-refresh"></i>Refresh</a></li>
+        <li>
+            <div class="input checkbox"><label for="include_closed"><input id="include_closed" type="checkbox">Include Closed</label></div>
+        </li>
+    </ul>
+</div>
+<div id="content" class="with-subnav" ng-class="{ 'panel-opened': portfolio.panel.status, 'panel-closed': !portfolio.panel.status }">
+    <div id="portfolio-grid" data-grid="portfolioGrid"></div>
+    <div ng-include="'manageIdeas/manageIdeas.tpl.html'"></div>
+</div>

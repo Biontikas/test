@@ -1,0 +1,42 @@
+[
+    {
+        "pattern": "/analysts",
+        "mockup": "getAllAnalysts.json"
+    },
+    {
+        "pattern": "/current-user",
+        "mockup": "getCurrentUserAndPoolProperties.json"
+    },
+    {
+        "pattern": "/ideas/{id}/orders",
+        "mockup": "getIdeaOrders.json"
+    },
+    {
+        "pattern": "/ideas/{id}/overview-graph",
+        "mockup": "getIdeaOverviewGraph.json"
+    },
+    {
+        "pattern": "/ideas/{id}/reason",
+        "mockup": "getIdeaReason.json"
+    },
+    {
+        "pattern": "/positions/by-analyst",
+        "mockup": "getPositionsByAnalyst.json"
+    },
+    {
+        "pattern": "/positions/by-industry",
+        "mockup": "getPositionsByIndustry.json"
+    },
+    {
+        "pattern": "/analysts",
+        "mockup": "getSecurityInfo.json"
+    },
+    {
+        "pattern": "/analysts",
+        "mockup": "getUnfilledOrders.json"
+    },
+    {
+        "pattern": "/analysts",
+        "mockup": "getUserLayout.json"
+    }
+]

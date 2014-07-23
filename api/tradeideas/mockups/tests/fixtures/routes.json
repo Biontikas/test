@@ -1,0 +1,21 @@
+[
+    {
+        "pattern": "/data/{id}",
+        "mockup": "data-1.json"
+    },
+    {
+        "pattern": "/login",
+        "view": "tradeideas.mockups.views.login"
+    },
+    {
+        "pattern": "/logout",
+        "view": "tradeideas.mockups.views.logout"
+    },
+    {
+        "pattern": "/users/create",
+        "context": "user",
+        "permission": "add",
+        "mockup": "data-user.json",
+        "validate": {"POST": "login"}
+    }
+]

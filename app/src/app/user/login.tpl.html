@@ -1,0 +1,27 @@
+<section id="content">
+    <form method="post" name="form" novalidate class="user-form" ng-controller="LoginFormController">
+        <div class="form-title">{{'login.title'|translate}}</div>
+        <div class="alert alert-warning" ng-show="authReason">
+            {{authReason}}
+        </div>
+        <div class="alert alert-error" ng-show="authError">
+            {{authError}}
+        </div>
+        <div class="input text">
+            <label for="email">{{'login.email'|translate}}</label>
+            <input id="email" name="email" type="email" ng-model="user.email" required autofocus>
+        </div>
+        <div class="input password">
+            <label for="password">{{'login.password'|translate}}</label>
+            <input id="password" name="password" type="password" ng-model="user.pass" required>
+        </div>
+        <div class="input checkbox push-label">
+            <label for="remember"><input id="remember" name="remember" type="checkbox" ng-model="user.remember"> {{'login.rememberMe'|translate}}</label>
+        </div>
+        <div class="submit push-label">
+            <button ng-click="login()" class="push-right">{{'login.submit'|translate}}</button>
+            <a href="forgot-password">{{'login.forgotPassword'|translate}}</a>
+        </div>
+        <div class="disclaimer" translate="login.disclaimer" translate-compile></div>
+    </form>
+</section>

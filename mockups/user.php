@@ -1,0 +1,1 @@
+<?phpheader("Content-type: application/json");//sleep(55);exit(")]}',\n".json_encode(array(    'status' => true,    'user' => array(        'name' => 'Name',        'surname' => 'Surname',        //'role' => 'analyst',        'role' => 'originator'    ))));

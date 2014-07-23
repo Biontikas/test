@@ -1,0 +1,357 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-width: 840px;
+    position: relative;
+    min-height: 100%;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: @textColor;
+    font: normal 11px/1.5 Arial, sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+table {
+    width: 100%;
+}
+
+th,
+td {
+    padding: 3px 6px;
+    text-align: left;
+    font-weight: normal;
+}
+
+thead th,
+thead td,
+tbody th {
+    background: @lightBlueColor url(../img/bg.thead.gif) repeat-x 0 bottom;
+    color: @whiteColor;
+}
+
+tbody td {
+    border-bottom: 1px solid #ddd;
+}
+
+.odd td {
+    background-color: @whiteColor;
+}
+
+.even td {
+    background-color: #ddd;
+}
+
+a {
+    color: @textColor;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: @textColor;
+    text-decoration: underline;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.push-left {
+    margin-left: 15px;
+}
+
+.push-right {
+    margin-right: 15px;
+}
+
+.n-m {
+    margin: 0 !important;
+}
+
+.n-p {
+    padding: 0 !important;
+}
+
+#wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 70px 0 0;
+    z-index: 20;
+}
+
+#content {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &.with-subnav {
+        margin-top: -30px;
+        padding-top: 30px;
+    }
+
+    &.panel-opened {
+        padding-bottom: 300px;
+    }
+
+    &.panel-closed {
+        padding-bottom: 25px;
+    }
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: @darkBlueColor;
+    z-index: 30;
+}
+
+#logo {
+    display: inline-block;
+    float: left;
+    margin: 10px 20px 0 5px;
+}
+
+#nav {
+    position: absolute;
+    bottom: 0;
+    left: 170px;
+    font-weight: bold;
+    font-size: 13px;
+
+    ul {
+        float: left;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        float: left;
+        display: inline-block;
+        margin: 0 5px 0 0;
+        padding: 0;
+    }
+
+    a {
+        display: inline-block;
+        float: left;
+        padding: 5px 15px;
+        background-color: @lightBlueColor;
+        border-top: 3px solid @darkBlueColor;
+        color: @whiteColor;
+
+        &:hover {
+            border-color: @orangeColor;
+            color: @whiteColor;
+            text-decoration: none;
+        }
+    }
+
+    .active a {
+        background-color: @whiteColor;
+        border-top: 3px solid @darkBlueColor;
+        color: @textColor;
+
+        &:hover {
+            border-color: @orangeColor;
+        }
+    }
+}
+
+#user {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    color: @whiteColor;
+
+    a {
+        color: @whiteColor;
+    }
+}
+
+#subnav {
+    /*position: absolute;
+    top: 0;
+    left: 0;*/
+    position: relative;
+    width: 100%;
+    height: 30px;
+    line-height: 16px;
+    overflow: hidden;
+    z-index: 15;
+
+    ul {
+        float: left;
+        margin: 0;
+        padding: 7px 0 0;
+        list-style: none;
+    }
+
+    li {
+        float: left;
+        display: inline-block;
+        height: 16px;
+        margin: 0 0 0 5px;
+        padding: 0 0 0 5px;
+        list-style: none;
+        border-left: 1px solid #808080;
+
+        &:first-child {
+            padding-left: 0;
+            border-left: 0;
+        }
+    }
+
+    a {
+        position: relative;
+        display: inline-block;
+        height: 22px;
+        top: -3px;
+        padding: 2px 5px;
+        line-height: 18px;
+        .rounded(4px);
+        border: 1px solid transparent;
+
+        &:hover {
+            background: #cfe0f4;
+            border-color: #9ebae1;
+            text-decoration: none;
+        }
+    }
+
+    .text label {
+        width: auto;
+        font-weight: normal;
+    }
+
+    .text input {
+        padding: 0;
+        width: 90px;
+    }
+}
+
+.ico {
+    float: left;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    background: url(../img/sprite.icons.png) no-repeat 0 0;
+
+    &.ico-add {
+        background-position: 0 0;
+    }
+
+    &.ico-pdf {
+        background-position: 0 -16px;
+    }
+
+    &.ico-xls {
+        background-position: 0 -32px;
+    }
+
+    &.ico-collapse {
+        background-position: 0 -64px;
+    }
+
+    &.ico-expand {
+        background-position: 0 -80px;
+    }
+
+    &.ico-refresh {
+        background-position: 0 -48px;
+    }
+
+    &.ico-notice {
+        background-position: 0 -96px;
+    }
+
+    &.ico-save {
+        background-position: 0 -112px;
+    }
+
+    &.ico-cancel {
+        background-position: 0 -128px;
+    }
+}
+
+.ico-hide-panel {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#loading-bar .bar {
+    background: @orangeColor;
+}
+
+#toast-container {
+    width: 100%;
+}
+
+#toast-container > div {
+    width: 350px;
+    margin: auto;
+    line-height: 14px;
+    padding: 3px 15px 4px 50px;
+    .border-radius(0, 3px, 3px, 0);
+    .rounded(0);
+    .opacity(1);
+    .box-shadow(none);
+
+    &.ng-enter,
+    &.ng-leave {
+        .transition(0s, ease-in);
+    }
+}
+
+#toast-container > *:hover {
+    .box-shadow(none);
+}

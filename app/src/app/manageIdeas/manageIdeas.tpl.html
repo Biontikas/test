@@ -1,0 +1,15 @@
+<div class="panel" ng-class="{ 'panel-hide': !panel.status }" ng-controller="ManageIdeasCtrl">
+    <div class="panel-header" ng-click="panel.toggle()"><span class="ico-hide-panel right">X</span>{{'manageIdeas'|translate}}</div>
+    <div class="panel-content">
+        <div class="tab-panel-header">
+            <ul>
+                <li ng-class="{ active : tab.id == tabs.current}" ng-repeat="tab in tabs.list track by tab.id">
+                    <a ng-click="tabs.open(tab.id)">{{tab.title|translate}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-panel-content">
+            <div class="tab-panel" ng-repeat="tab in tabs.list track by tab.id" ng-show="tab.id == tabs.current" ng-include="tab.template" ng-controller="tab.controller"></div>
+        </div>
+    </div>
+</div>

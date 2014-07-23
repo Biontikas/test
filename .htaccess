@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteRule    ^$ app/dist/    [QSA,L]
+   RewriteRule    (.*) app/dist/$1 [QSA,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|xml|gz|svg)$">
+    Header append Vary Accept-Encoding
+  </FilesMatch>
+</IfModule>

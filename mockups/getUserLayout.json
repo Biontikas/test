@@ -1,0 +1,10 @@
+{
+    "d": {
+        "__type": "GLGPartners.TradeIdeas.Theoretical.Website.Infastructure.UserLayoutState",
+        "IncludeClosed": false,
+        "PageSortDirection": "ASC",
+        "PageSortOption": "QuintileRank",
+        "AnalystGridLayout": [],
+        "IndustryGridLayout": ["ext-gen148-gp-GroupedBy-Metals & Mining", "ext-gen148-gp-GroupedBy-Health Care", "ext-gen148-gp-GroupedBy-Consumer Services", "ext-gen148-gp-GroupedBy-Consumer Staples", "ext-gen148-gp-GroupedBy-Automobiles & Components", "ext-gen148-gp-GroupedBy-Const Materials, Cont & Pack, Paper & Forest", "ext-gen148-gp-GroupedBy-Retailing", "ext-gen148-gp-GroupedBy-Utilities", "ext-gen148-gp-GroupedBy-Transportation", "ext-gen148-gp-GroupedBy-Banks", "ext-gen148-gp-GroupedBy-Unclassified", "ext-gen148-gp-GroupedBy-Information Technology", "ext-gen148-gp-GroupedBy-Insurance", "ext-gen148-gp-GroupedBy-Telecommunication Services", "ext-gen148-gp-GroupedBy-Commercial Services & Supplies", "ext-gen148-gp-GroupedBy-Capital Goods", "ext-gen148-gp-GroupedBy-Diversified Financials & Real Estate"]
+    }
+}

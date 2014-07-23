@@ -1,0 +1,16 @@
+<div id="subnav">
+    <ul>
+        <li>
+            <div class="input text"><label for="from">From</label><input id="from" type="input" name="from"></div>
+        </li>
+        <li>
+            <div class="input text"><label for="to">To</label><input id="to" type="input" name="to"></div>
+        </li>
+        <li><a ng-click="historyGrid.refresh()"><i class="ico ico-refresh"></i>Refresh</a></li>
+        <li><a ng-click="historyGrid.downloadAll()"><i class="ico ico-xls"></i>Download All as Excel</a></li>
+        <li><a ng-click="historyGrid.downloadView()"><i class="ico ico-xls"></i>Download View as Excel</a></li>
+    </ul>
+</div>
+<div id="content" class="with-subnav">
+    <div data-grid="historyGrid"></div>
+</div>

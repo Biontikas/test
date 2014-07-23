@@ -1,0 +1,21 @@
+<section id="content">
+    <form id="form-change-password" name="form" novalidate class="user-form">
+        <div class="form-title">{{'changePassword.title'|translate}}</div>
+        <div class="input text">
+            <label for="password">{{'changePassword.password'|translate}}</label>
+            <input id="password" name="password" type="password" ng-model="user.password" required autofocus>
+        </div>
+        <div class="input text">
+            <label for="passwordNew">{{'changePassword.passwordNew'|translate}}</label>
+            <input id="passwordNew" name="passwordNew" type="password" ng-model="user.passwordNew" required autofocus>
+        </div>
+        <div class="input text">
+            <label for="passwordNewConfirm">{{'changePassword.passwordConfirmNew'|translate}}</label>
+            <input id="passwordNewConfirm" name="passwordNewConfirm" type="password" ng-model="user.passwordNewConfirm" required autofocus>
+        </div>
+        <div class="submit push-label">
+            <button ng-click="change()" class="push-right">{{'changePassword.submit'|translate}}</button>
+            <a href="portfolio">{{'changePassword.cancel'|translate}}</a>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,14 @@
+<section id="content">
+    <form name="form" novalidate class="user-form">
+        <div class="form-title">{{'forgotPassword.title'|translate}}</div>
+        <div class="intro">{{'forgotPassword.intro'|translate}}</div>
+        <div class="input text">
+            <label for="email">{{'forgotPassword.email'|translate}}</label>
+            <input id="email" name="email" type="email" ng-model="user.email" required autofocus>
+        </div>
+        <div class="submit push-label">
+            <button ng-click="login()" class="push-right">{{'forgotPassword.submit'|translate}}</button>
+            <a href="login">{{'forgotPassword.back'|translate}}</a>
+        </div>
+    </form>
+</section>

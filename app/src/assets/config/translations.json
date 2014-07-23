@@ -1,0 +1,124 @@
+)]}',
+{
+    "en": {
+        "navigation": {
+            "portfolio": "Portfolio",
+            "portfolioByAnalyst": "Portfolio by Analyst",
+            "activityHistory": "Activity History",
+            "analystAdmin": "Analyst Admin",
+            "summary": "Summary",
+            "help": "Help"
+        },
+
+        "errors.route.changeError": "Route change error",
+
+        "login": {
+            "title": "Enter login credentials",
+            "email": "Email Address:",
+            "password": "Password:",
+            "rememberMe": "Remember me today",
+            "forgotPassword": "Forgot your password?",
+            "submit": "Sign in",
+            "disclaimer": "<strong>Disclaimer</strong><br>This platform is made available to you to provide 'Trade Ideas' for consideration by GLG Partners LP. In using this platform you represent that any Trade Idea input is based solely upon publicly available information and your legitimate analysis of it.",
+            "reason.notAuthorized": "You do not have the necessary access permissions.  Do you want to login as someone else?",
+            "reason.notAuthenticated": "You must be logged in to access this part of the application.",
+            "error.invalidCredentials": "Login failed.  Please check your credentials and try again.",
+            "error.serverError": "There was a problem with authenticating: {{exception}}."
+        },
+
+        "forgotPassword": {
+            "title": "Forgot Your Password?",
+            "intro": "Enter your email address to receive your password.",
+            "email": "@:login.email",
+            "submit": "Submit",
+            "back": "Back to login"
+        },
+
+        "changePassword": {
+            "title": "Change Your Password",
+            "password": "Password:",
+            "passwordNew": "New Password:",
+            "passwordConfirmNew": "Confirm New Password:",
+            "submit": "Submit",
+            "cancel": "Cancel"
+        },
+
+        "portfolio": {
+            "SecurityName": "<strong>Group</strong><br>Security Name",
+            "Ticker": "<strong>Rank</strong><br>Ticker",
+            "Quantity": "Quantity",
+            "PrevClose": "Prev. Close",
+            "NetExposure": "Net Exposure",
+            "IdeaCost": "Idea Cost",
+            "MTDMarketNeutralReturn": "MTD MN Return",
+            "YTDMarketNeutralReturn": "12m MN Return",
+            "YTDLongMarketNeutralReturnGroup": "12m MN Return <br> LONG (#)",
+            "YTDShortMarketNeutralReturnGroup": "12m MN Return <br> SHORT (#)",
+            "PriceTarget": "Price Target",
+            "RemainingAlpha": "Remaining Alpha",
+            "UnitCost": "Unit Cost",
+            "NumberPositionChanges": "Posn Changes",
+            "DaysActive": "Days Active",
+            "StartDate": "Start Date",
+            "CloseDate": "Close Date"
+        },
+
+        "manageIdeas": "Manage Ideas",
+
+        "unfilledOrders": {
+            "title": "Unfilled Orders",
+            "IdeaId": "Idea",
+            "StartTime": "Order Time",
+            "OpenClose": "Action",
+            "SideID": "Side",
+            "SecurityName": "Security",
+            "GenericBBTick": "Ticker",
+            "Quantity": "Quantity",
+            "FilledQ": "% Filled",
+            "Days": "Days",
+            "FillTime": "Fill Time",
+            "FilledPQ": "Fill Price"
+        },
+
+        "ideaOverview": {
+            "title": "Idea Overview",
+            "StartTime": "Start Time",
+            "OpenClose": "Action",
+            "SideID": "Side",
+            "Quantity": "Quantity",
+            "StartPrice": "Start Price",
+            "Vwap": "Filled Price",
+            "EndTime": "End Time"
+        },
+
+        "createIdea": {
+            "title": "Create New Idea"
+        },
+
+        "editIdea": {
+            "title": "Edit Idea"
+        },
+
+        "analyst": {
+            "FirstName": "First Name",
+            "LastName": "Last Name",
+            "Email": "Email",
+            "PhoneNumber": "Phone Number",
+            "IsActive": "Is Active"
+        },
+
+        "activity": {
+            "IdeaId": "Idea Id",
+            "Action": "Action",
+            "SideId": "Side",
+            "Ticker": "Ticker",
+            "Quantity": "Quantity",
+            "Description": "Description",
+            "PercentageFilled": "% Filled",
+            "Days": "Days",
+            "FillTime": "Fill Time",
+            "StartTime": "Start Time",
+            "CurrentFillPrice": "Fill Price"
+        }
+    }
+}

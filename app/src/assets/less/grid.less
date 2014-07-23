@@ -1,0 +1,171 @@
+.grid {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+    padding-top: 26px;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    .grid-head {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /*height: 26px;*/
+        background: @lightBlueColor url(../img/bg.thead.gif) repeat-x 0 bottom;
+        border-bottom: 1px solid @whiteColor;
+
+        th {
+            position: relative;
+            padding: 0;
+
+            a {
+                color: @whiteColor;
+            }
+        }
+
+        .header {
+            padding: 4px 5px;
+        }
+    }
+
+    .grid-data {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overflow-y: scroll;
+    }
+
+    .grid-foot {
+        display: none;
+    }
+
+    table {
+        table-layout: fixed;
+        word-break: break-all;
+    }
+
+    th {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-align: left;
+    }
+
+    .divider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-left: 1px solid @whiteColor;
+    }
+
+    thead tr th:first-child .divider {
+        border-left: 0;
+    }
+
+    thead .sortable:hover,
+    .sort-asc,
+    .sort-desc {
+        background: #5479B1 url(../img/bg.thead_sorted.gif) repeat-x 0 100%;
+    }
+
+    .sortable {
+        cursor: pointer;
+
+        .header {
+            padding-right: 15px;
+            position: relative;
+
+            &:after,
+            &:before {
+                content: "";
+                border-width: 0 4px 4px;
+                border-style: solid;
+                border-color: @whiteColor transparent;
+                visibility: visible;
+                right: 5px;
+                top: 50%;
+                position: absolute;
+                .opacity(0.3);
+                margin-top: -4px;
+            }
+
+            &:before {
+                margin-top: 2px;
+                border-bottom: none;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-top: 4px solid @whiteColor;
+            }
+        }
+
+        &:hover .header:after,
+        &:hover .header:before {
+            .opacity(1);
+            visibility: visible;
+        }
+
+        &.sort-desc .header:after,
+        &.sort-asc .header:after {
+            margin-top: -2px;
+        }
+
+        &.sort-desc .header:before,
+        &.sort-asc .header:before {
+            visibility: hidden;
+        }
+
+        &.sort-asc .header:after,
+        &.sort-asc .header:hover:after {
+            visibility: visible;
+            .opacity(0.6);
+        }
+
+        &.sort-desc .header:after {
+            border-bottom: none;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid @whiteColor;
+            visibility: visible;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            .opacity(0.6);
+        }
+    }
+
+    &+ .pagination {
+        margin-top: 0;
+    }
+
+    .grid-data tbody tr:hover:not(.grid-group) td {
+        background-color: #efefef;
+    }
+
+    .grid-group {
+        background-color: #003399;
+        color: @whiteColor;
+        cursor: default;
+
+        a {
+            color: @whiteColor;
+        }
+    }
+
+    .grid-loading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+}

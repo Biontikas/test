@@ -1,0 +1,166 @@
+<div class="idea-details">
+    <div class="security-panel">
+        <table>
+            <colgroup>
+                <col style="width:120px;" />
+            </colgroup>
+            <tbody>
+                <tr ng-if="!idea.id">
+                    <th>Side</th>
+                    <th>Bloomberg Ticker (e.g. VOD LN)</th>
+                </tr>
+                <tr ng-if="idea.id">
+                    <th>Side</th>
+                    <th>Security</th>
+                </tr>
+                <tr ng-if="!idea.id">
+                    <td class="security-selects" colspan="2">
+                        <select tabindex="1" onchange="validateTargetPrice(false,getParentControl(this));" class="select-type" size="1">
+                            <option value="">...</option>
+                            <option value="1" style="color:White;background:Green">BUY</option>
+                            <option value="2" style="color:White;background:#DD4444">SELL</option>
+                        </select>
+                        <input type="text" tabindex="2" onblur="validateUppercaseTicker(this);" class="text-ticker">
+                        <select tabindex="3" onchange="searchForTicker();" class="select-ticker-type">
+                            <option value="">...</option>
+                            <option value="Equity">Equity</option>
+                            <option value="Index">Index</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr ng-if="idea.id">
+                    <th style="background: {{ idea.SideEditStyle }}">{{ idea.SideEdit }}</th>
+                    <td>{{ idea.SecurityNameEdit }}</td>
+                </tr>
+                <tr ng-if="!idea.id">
+                    <th>Security</th>
+                    <td>{{ idea.SecurityName }}</td>
+                </tr>
+                <tr>
+                    <th>Exchange</th>
+                    <td>{{ idea.SecurityMarket }}</td>
+                </tr>
+                <tr>
+                    <th>Industry</th>
+                    <td>{{ idea.SecurityIndustry }}</td>
+                </tr>
+                <tr>
+                    <th>ISIN</th>
+                    <td>{{ idea.SecurityISIN }}</td>
+                </tr>
+                <tr>
+                    <th>Prev. Close</th>
+                    <td>{{ idea.SecurityPrice }}</td>
+                </tr>
+                <tr ng-if="idea.id">
+                    <th>Start Price</th>
+                    <td>{{ idea.StartPrice }}</td>
+                </tr>
+                <tr>
+                    <th>Avg Daily Volume</th>
+                    <td>{{ idea.SecurityAvgVol }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="idea-details-panel">
+        <table>
+            <colgroup>
+                <col style="width:50%;" />
+                <col style="width:50%;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Desired Size</th>
+                    <th>Maximum</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="n-p"><input type="text" tabindex="4" onblur="validateDesiredSize(false,getParentControl(this),true)" onkeyup="applyCommas(event,this)" onkeydown="validateNumeric(event,false,this)" id="textDesiredSizeinEuros"></td>
+                    <td id="MaxExposure">10M EUR</td>
+                </tr>
+                <tr>
+                    <td class="n-p"><input type="text" tabindex="5" onblur="validateDesiredSize(true,getParentControl(this),true)" onkeyup="applyCommas(event,this)" onkeydown="validateNumeric(event,false,this)" value="{{ idea.textDesiredSizeinUnits }}"></td>
+                    <td id="maxSizeInUnits">Units</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <colgroup>
+                <col style="width:50%;" />
+                <col style="width:50%;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th colspan="2">Target</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="n-p"><input type="text" tabindex="6" onblur="validateTargetPrice(false,getParentControl(this));" onkeyup="applyCommas(event,this)" onkeypress="return validateNumeric(event,true,this)" value="{{ idea.textTargetPrice }}" class="numinput"></td>
+                    <td>Price</td>
+                </tr>
+                <tr>
+                    <td class="n-p"><input type="text" id="textTargetReturn" disabled="disabled"></td>
+                    <td>Estimated % Return</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Analyst</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-if="idea.id">
+                    <td id="AnalystEdit"></td>
+                </tr>
+                <tr ng-if="!idea.id">
+                    <td class="n-p">
+                        <select tabindex="7">
+                            <option value=""></option>
+                            <option value="10892">Aldas Kirvaitis</option>
+                            <option value="10923">Marijus Saulys</option>
+                            <option value="11477">Valentinas Bogdanovicius</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div ng-if="!idea.id">
+            <input type="button" tabindex="10" onclick="clearIdeaForm(eSubmitType.Open,ideaCreateDiv);" value="Clear" name="Button2" class="button">
+            <input type="button" tabindex="9" style="font-weight: bold" onclick="submitIdea(eSubmitType.Open,ideaCreateDiv)" value="Submit Idea" name="Button" class="button">
+        </div>
+        <div ng-if="idea.id">
+            <input type="button" tabindex="10" onclick="closeIdea(ideaEditDiv);" value="Close" id="closeIdeaButton" style="background-color:red" class="button">
+            <input type="button" tabindex="9" onclick="submitIdea(eSubmitType.Update,ideaEditDiv)" value="Update" name="Button" class="button">
+            <input ng-if="idea.reopenIdeaButton" type="button" tabindex="11" onclick="submitIdea(eSubmitType.Reopen,ideaEditDiv)" value="Reopen" name="Button" class="button">
+        </div>
+    </div>
+    <div class="reason-panel">
+        <table>
+            <thead>
+                <tr>
+                    <th>Reason</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="n-p">
+                        <textarea tabindex="8" id="taReasons" cols="1" rows="1"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <input type="hidden" id="SecurityID" value="">
+        <input type="hidden" id="VWAP" value="">
+        <input type="hidden" id="FXRate" value="">
+        <input type="hidden" id="Divisor" value="">
+        <input type="hidden" id="oldUnits" value="">
+        <span onclick="submitIdeaConfirm();" id="hiddenClicker"></span>
+    </div>
+</div>

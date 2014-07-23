@@ -1,0 +1,52 @@
+<!doctype html>
+<!--[if IE 8 ]> <html class="ie8" lang="en" xmlns:ng="http://angularjs.org" id="ng-app"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>glgpartners.net</title>
+    <!-- @ifdef BASE -->
+    <base href="<!-- @echo BASE -->"></base>
+    <!-- @endif -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/app<!-- @if RELEASE==true -->.min<!-- @endif -->.css?<!-- @echo VERSION -->" />
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/app<!-- @if RELEASE==true -->.min<!-- @endif -->.js?<!-- @echo VERSION -->"></script>
+    <!--[if lte IE 8]>
+        <script type="text/javascript">
+            document.createElement('ng-include');
+            document.createElement('ng-pluralize');
+            document.createElement('ng-view');
+
+            // Optionally these for CSS
+            document.createElement('ng:include');
+            document.createElement('ng:pluralize');
+            document.createElement('ng:view');
+
+            if (typeof String.prototype.trim !== 'function') {
+                String.prototype.trim = function() {
+                    return this.replace(/^\s+|\s+$/g, '');
+                }
+            }
+        </script>
+      <![endif]-->
+</head>
+<body ng-controller="AppCtrl">
+    <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="wrapper">
+        <div ng-include="'partials/header.tpl.html'" ng-controller="HeaderCtrl"></div>
+        <div id="container" ng-view></div>
+    </div>
+
+    <!-- @if DEV==true -->
+    <script type='text/javascript'>//<![CDATA[
+;document.write("<script defer src='//HOST:3000/socket.io/socket.io.js'><\/script><script defer src='//HOST:3001/client/browser-sync-client.0.9.1.js'><\/script>".replace(/HOST/g, location.hostname));
+//]]></script>
+    <!-- @endif -->
+</body>
+</html>

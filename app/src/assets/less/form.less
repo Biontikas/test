@@ -1,0 +1,74 @@
+.checkbox {
+    label {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    label > input[type=checkbox] {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.input {
+    margin-bottom: 10px;
+}
+
+.text > label,
+.password > label,
+.select > label,
+.textarea > label {
+    float: left;
+    width: 100px;
+    margin-right: 10px;
+    padding-top: 2px;
+    font-weight: bold;
+    text-align: right;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+select,
+textarea {
+    width: 200px;
+    padding: 3px;
+    border: 1px solid @greyColor;
+}
+
+input::-webkit-input-placeholder {
+    color: @greyColor;
+}
+
+input:-moz-placeholder {
+    color: @greyColor;
+}
+
+input:-ms-input-placeholder {
+    color: @greyColor;
+}
+
+.push-label {
+    padding-left: 110px;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+button {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    border: 0;
+    padding: 4px 15px;
+    background-color: @titleBlueColor;
+    color: @whiteColor;
+    cursor: pointer;
+    overflow: visible;
+    white-space: nowrap;
+    text-align: center;
+}

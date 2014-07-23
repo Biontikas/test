@@ -1,0 +1,6 @@
+{
+    "d": {
+        "username": "user",
+        "groups": ["analytics"]
+    }
+}

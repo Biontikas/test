@@ -1,0 +1,18 @@
+<header class="clearfix">
+    <a id="logo" href="#"><img src="img/logo.gif" alt=""></a>
+
+    <div id="nav" ng-if="isAuthenticated && navigation">
+        <ul class="categories">
+            <li ng-class="{active : '/' + item.href == location.path()}" ng-repeat="item in navigation">
+                <a ng-href="{{item.href}}">{{'navigation.'+item.title|translate}}</a>
+            </li>
+        </ul>
+    </div>
+    <div ng-if="isAuthenticated" id="user">
+        {{user.name}} {{user.surname}} (<a href="change-password">change password</a>, <a ng-click="logout()">Logout</a>)
+    </div>
+    <toaster-container toaster-options="{'position-class': 'toast-top-center', 'close-button': true}"></toaster-container>
+</header>
+<div ng-show="hasPendingRequests()" id="loader">
+    Loading
+</div>

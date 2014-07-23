@@ -1,0 +1,21 @@
+/app/bower_components
+/app/node_modules
+/app/dist/*
+!/app/dist/.gitkeep
+/app/gulpfile.local.js
+
+*.pyc
+/api/*.egg-info
+/api/.installed.cfg
+/api/bin
+/api/develop-eggs
+/api/include
+/api/lib
+/api/local
+/api/parts
+/api/share
+/api/tags
+.idea/
+app/coverage/PhantomJS 1.9.7 (Windows 7)/index.html
+app/coverage/
+test-results.xml

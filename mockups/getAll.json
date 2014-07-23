@@ -1,0 +1,40 @@
+{
+    "d": [
+        {
+            "__type": "GLGPartners.TradeIdeas.Theoretical.Website.Services.Interfaces.Analyst",
+            "FirstName": "Aldas",
+            "LastName": "Kirvaitis",
+            "Email": "aldas.kirvaitis@metasite.net",
+            "IsActive": true,
+            "PhoneNumber": "",
+            "NumberOpenIdeas": 0,
+            "LastActionDate": "\/Date(1399905691000)\/",
+            "PersonId": 10892,
+            "FullName": "Aldas Kirvaitis"
+        },
+        {
+            "__type": "GLGPartners.TradeIdeas.Theoretical.Website.Services.Interfaces.Analyst",
+            "FirstName": "Marijus",
+            "LastName": "Saulys",
+            "Email": "aldas.kirvaitis@gmail.com",
+            "IsActive": true,
+            "PhoneNumber": "",
+            "NumberOpenIdeas": 0,
+            "LastActionDate": "\/Date(1399905108000)\/",
+            "PersonId": 10923,
+            "FullName": "Marijus Saulys"
+        },
+        {
+            "__type": "GLGPartners.TradeIdeas.Theoretical.Website.Services.Interfaces.Analyst",
+            "FirstName": "Valentinas",
+            "LastName": "Bogdanovicius",
+            "Email": "valentinas.bogdanovicius@metasite.net",
+            "IsActive": true,
+            "PhoneNumber": "",
+            "NumberOpenIdeas": 0,
+            "LastActionDate": "\/Date(1399906550000)\/",
+            "PersonId": 11477,
+            "FullName": "Valentinas Bogdanovicius"
+        }
+    ]
+}

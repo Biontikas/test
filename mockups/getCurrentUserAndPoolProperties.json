@@ -1,0 +1,13 @@
+{
+    "d": {
+        "UserName": "Aldas Kirvaitis",
+        "PortfolioCurrencyCode": "EUR",
+        "CurrentPoolName": "Europe Trial",
+        "MaxPositionExposure": 10000000,
+        "VwapRatio": 5,
+        "CommissionFactorBps": 20,
+        "BenchmarkName": "SXXP - DOW JONES STOXX 600 PRICE INDEX EUR",
+        "BenchmarkTicker": "SXXP Index",
+        "RankGroupingModeName": "industry"
+    }
+}

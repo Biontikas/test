@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# --- separate node for each project ---
+#node_version=0.10.28
+
+#if [ ! -e nodejs-plugin-$node_version.zip ]
+#then
+#    wget https://s3.amazonaws.com/clickstacks/admin/nodejs-plugin-$node_version.zip
+#    unzip nodejs-plugin-$node_version.zip
+#    tar xf node.tar.gz
+#    mv node-v* node_lib
+#fi
+
+#rm -rf target
+#mkdir target
+
+#export PATH=$PATH:$WORKSPACE/node_lib/bin
+
+# --- npm dependencies ---
+cd app
+#npm --version
+npm install
+
+# not needed for now
+#npm install grunt grunt-cli
+#npm install phantomjs
+
+# --- bower dependencies ---
+export PATH=./node_modules/bower/bin:$PATH
+bower update && bower install
+
+# --- ??? ---
+npm test
+
+# --- how to start this one??? ---
+export PATH=./node_modules/gulp/bin:$PATH
+gulp.js

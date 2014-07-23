@@ -1,0 +1,145 @@
+/* manage panel */
+
+.panel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: #ccc;
+    z-index: 40;
+    overflow: hidden;
+    .transition(0.2s, ease-in-out);
+}
+
+.panel-hide {
+    height: 25px;
+}
+
+.panel-header {
+    height: 25px;
+    margin: 0;
+    padding: 4px 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+    background: @lightBlueColor url(../img/bg.thead.gif) repeat-x 0 bottom;
+    color: @whiteColor;
+    cursor: pointer;
+}
+
+.panel-content {
+    position: relative;
+    height: 275px;
+    padding: 40px 6px 6px;
+    background: #ccc;
+    z-index: 15;
+}
+
+.tab-panel-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 10;
+
+    ul {
+        float: left;
+        margin: 0;
+        padding: 12px 0 0 10px;
+        list-style: none;
+    }
+
+    li {
+        float: left;
+        display: inline-block;
+        margin: 0 2px 0 0;
+        padding: 0;
+    }
+
+    a {
+        display: inline-block;
+        float: left;
+        height: 28px;
+        padding: 5px 15px 0;
+        background-color: #eee;
+        border: 1px solid #eee;
+        border-bottom: 0;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: none;
+            background-color: @whiteColor;
+            border-color: @whiteColor;
+            border-top: 2px solid @orangeColor;
+            padding-top: 4px;
+        }
+    }
+
+    .active a {
+        position: relative;
+        height: 29px;
+        background-color: @whiteColor;
+        border-color: @greyColor;
+        font-weight: bold;
+    }
+}
+
+.tab-panel-content {
+    position: relative;
+    height: 100%;
+    padding: 2px;
+    background: @whiteColor;
+    border: 1px solid @greyColor;
+    z-index: 5;
+}
+
+.tab-panel {
+    height: 100%;
+}
+
+.generate-pdf {
+    cursor: pointer;
+}
+
+.ico-notice {
+    position: relative;
+    margin-left: -30px;
+}
+
+/* custom grid styles */
+
+.grid {
+    .idea-id {
+        color: #0000FF;
+        font-size: 9px;
+    }
+
+    .grid-group-hd td { border-bottom: 2px solid @whiteColor; }
+
+    .grid-row-sector1 { background-color: #003399; }
+
+    .grid-row-sector1 td { color: @whiteColor; font-weight: bold; }
+
+    .grid-row-sector2 { background-color: #418EDB; }
+
+    .grid-row-sector2 td { color: #000; font-weight: bold; }
+
+    .grid-row-sector3 { background-color: #D0D0D0; }
+
+    .grid-row-sector3 td { color: #000; font-weight: bold; }
+
+    .grid-row-sector4 { background-color: #FFB5B8; }
+
+    .grid-row-sector4 td { color: #000; font-weight: bold; }
+
+    .grid-row-sector5 { background-color: #C40000; }
+
+    .grid-row-sector5 td { color: @whiteColor; font-weight: bold; }
+
+    .grid-row-divider { background-color: #ddd; border-color: #ddd; }
+
+    .grid-row-divider-yellow { background-color: #F0E68C; border-color: #F0E68C; }
+
+    .grid-row-divider-yellow-alt { background-color: #FFD700; border-color: #FFD700; }
+}

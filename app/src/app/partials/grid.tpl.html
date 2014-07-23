@@ -1,0 +1,55 @@
+<div class="grid-head">
+    <table>
+        <colgroup>
+            <col ng-if="params.collapsible" width="30" style="width:30px;" />
+            <col ng-repeat="column in params.columnsList" width="{{column.width}}" style="width: {{column.width}}px;" />
+        </colgroup>
+        <thead ng-if="!params.groupBy">
+            <tr>
+                <th ng-repeat="column in params.columnsList" ng-class="{'sortable': column.sortable, 'sort-asc': column.sortable && isAsc(column.field), 'sort-desc': column.sortable && isDesc(column.field)}" ng-click="changeSort(column.field)">
+                    <div class="divider"></div>
+                    <div class="header" translate="{{column.header}}" translate-compile></div>
+                </th>
+            </tr>
+        </thead>
+        <thead ng-if="params.groupBy">
+            <tr>
+                <th ng-if="params.collapsible"><div class="divider"></div></th>
+                <th ng-repeat="column in params.columnsList" ng-class="{'sortable': column.sortable, 'sort-asc': column.sortable && isAsc(column.group.field), 'sort-desc': column.sortable && isDesc(column.group.field)}" ng-click="changeSort(column.group.field)">
+                    <div class="divider"></div>
+                    <div class="header" translate="{{column.header}}" translate-compile></div>
+                </th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div class="grid-data">
+    <table>
+        <colgroup>
+            <col ng-if="params.collapsible" width="30" style="width:30px;" />
+            <col ng-repeat="column in params.columnsList" width="{{column.width}}" style="width: {{column.width}}px;" />
+        </colgroup>
+        <tbody ng-if="params.items">
+            <tr bindonce ng-repeat="item in params.items | orderBy:rawProperty(params.sort):params.reverse" ng-class="{'even': ($index+1)%2===0}">
+                <td ng-repeat="column in params.columnsList">
+                    <span bo-html="item[column.field+'_rendered']"></span>
+                </td>
+            </tr>
+        </tbody>
+        <tbody ng-if="params.groups" bindonce ng-repeat="group in params.groups | orderBy:params.sort:params.reverse track by group.id">
+            <tr class="grid-group {{ getGroupClass(group, $index+1) }}" ng-click="toggleGroup(group)">
+                <td ng-if="params.collapsible"><i class="ico ico-collapse" ng-class="{ 'ico-expand': group.hideRows }"></i></td>
+                <td ng-repeat="column in params.columnsList">
+                    <span bo-html="group.item[column.group.field + '_rendered']"></span>
+                </td>
+            </tr>
+            <tr class="{{ getRowClass(item, $index+1) }}" ng-hide="group.hideRows" ng-repeat="item in group.data" bo-class="{'even': ($index+1)%2===0}">
+                <td ng-if="params.collapsible"></td>
+                <td ng-click="cellSelect(item)" ng-repeat="column in params.columnsList">
+                    <span bo-html="item[column.field + '_rendered']"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div ng-if="params.showLoading" ng-show="params.loading" class="grid-loading"></div>
+</div>

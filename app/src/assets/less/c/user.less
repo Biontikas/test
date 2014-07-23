@@ -1,0 +1,59 @@
+/* login form */
+
+.user-form {
+    width: 370px;
+    margin: 40px auto 0;
+    padding: 2px 3px;
+    background-color: #eee;
+    border: 1px solid @darkBlueColor;
+
+    .form-title {
+        margin-bottom: 15px;
+        padding: 4px 5px;
+        background-color: @titleBlueColor;
+        color: @whiteColor;
+        font-weight: bold;
+    }
+
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .submit {
+        margin-bottom: 15px;
+    }
+
+    .disclaimer {
+        padding: 10px;
+    }
+
+    .intro {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+/* change password */
+
+#form-change-password .text > label,
+#form-change-password .password > label,
+#form-change-password .select > label,
+#form-change-password .textarea > label {
+    width: 150px;
+}
+
+#form-change-password input[type="text"],
+#form-change-password input[type="password"],
+#form-change-password input[type="email"],
+#form-change-password select,
+#form-change-password textarea {
+    width: 180px;
+}
+
+#form-change-password .push-label {
+    padding-left: 160px;
+}
