@@ -9,7 +9,9 @@ machine:
 
 checkout:
   post:
-    - git clone https://github.com/Biontikas/test2 api
+    - git clone https://github.com/Biontikas/test2 test/api
+    - git clone https://github.com/Biontikas/test2 xxx
+    - git clone https://github.com/Biontikas/test2 home/api
 
 #dependencies:
 #  pre:
