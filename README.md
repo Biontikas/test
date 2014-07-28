@@ -1,4 +1,4 @@
-# GLGPARTNERS.NET
+# ...
 
 ***
 
