@@ -7,6 +7,10 @@ machine:
   node:
     version: 0.10.26
 
+checkout:
+  post:
+    - git clone git@github.com/Biontikas/test2:api
+
 dependencies:
   pre:
     - npm install -g gulp
