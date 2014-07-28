@@ -9,23 +9,23 @@ machine:
 
 checkout:
   post:
-    - git clone https://github.com/Biontikas/test2
+    - git clone https://github.com/Biontikas/test2:api
 
-dependencies:
-  pre:
-    - npm install -g gulp
-#    karma start doesnt work even with this global. works only with node node_modules/karma...
-#    - npm install -g karma
-    - npm install
-    - bower update && bower install
-    - gulp
-
-test:
-  override:
-    - node node_modules/karma/bin/karma start test/config/unit.js --single-run
-
-deployment:
-  demo:
-    branch: master
-    commands:
-      - rsync -avz -e "ssh 92.61.34.46 -l dev" . :glgpartners.net
+#dependencies:
+#  pre:
+#    - npm install -g gulp
+##    karma start doesnt work even with this global. works only with node node_modules/karma...
+##    - npm install -g karma
+#    - npm install
+#    - bower update && bower install
+#    - gulp
+#
+#test:
+#  override:
+#    - node node_modules/karma/bin/karma start test/config/unit.js --single-run
+#
+#deployment:
+#  demo:
+#    branch: master
+#    commands:
+#      - rsync -avz -e "ssh 92.61.34.46 -l dev" . :glgpartners.net
