@@ -9,9 +9,14 @@ machine:
 
 checkout:
   post:
+    - pwd
+    - ls
     - git clone https://github.com/Biontikas/test2 test/api
+    - ls
     - git clone https://github.com/Biontikas/test2 xxx
+    - ls
     - git clone https://github.com/Biontikas/test2 home/api
+    - ls
 
 #dependencies:
 #  pre:
