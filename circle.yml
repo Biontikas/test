@@ -8,14 +8,15 @@ machine:
     version: 0.10.26
 
 checkout:
+  pre:
+    - pwd
+    - ls
+    - git clone https://github.com/Biontikas/test2 api1
+    - ls
   post:
     - pwd
     - ls
-    - git clone https://github.com/Biontikas/test2 test/api
-    - ls
-    - git clone https://github.com/Biontikas/test2 xxx
-    - ls
-    - git clone https://github.com/Biontikas/test2 home/api
+    - git clone https://github.com/Biontikas/test2 api2
     - ls
 
 #dependencies:
