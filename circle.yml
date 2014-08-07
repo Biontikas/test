@@ -10,7 +10,8 @@ machine:
 checkout:
   post:
 #    - git clone https://github.com/Biontikas/test2 ../api
-    - git clone https://github.com/ahlmss/tiwebbackend ../api
+#    - git clone https://github.com/ahlmss/tiwebbackend ../api
+    - git clone https://github.com/marijuss/test2.git ../test2
 
 #dependencies:
 #  pre:
